@@ -15,6 +15,10 @@ build() {
   gulp
 }
 
+if [ -n "${BINTRAY_USER}" ] && [ -n "${BINTRAY_PASSWORD}" ]; then
+    curl -u${BINTRAY_USER}:${BINTRAY_PASSWORD} https://api.bintray.com/npm/driveclutch/clutch-ui/auth > ~/.npmrc
+fi;
+
 case "${1}" in
   build)
     npm install
