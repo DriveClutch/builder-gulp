@@ -17,7 +17,6 @@ build() {
 
 if [ -n "${BINTRAY_USER}" ] && [ -n "${BINTRAY_PASSWORD}" ]; then
     curl -u${BINTRAY_USER}:${BINTRAY_PASSWORD} https://api.bintray.com/npm/driveclutch/clutch-ui/auth/scope/clutch > ~/.npmrc
-    npm config set @clutch:registry https://api.bintray.com/npm/driveclutch/clutch-ui
 fi;
 
 case "${1}" in
