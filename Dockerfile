@@ -1,4 +1,4 @@
-FROM node:5.1.0
+FROM node:6.10.2
 MAINTAINER David Hallum <david@driveclutch.com>
 
 RUN apt-get update \
